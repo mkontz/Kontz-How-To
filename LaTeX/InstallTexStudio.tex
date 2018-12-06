@@ -1,0 +1,32 @@
+\documentclass{scrartcl}
+\usepackage{vhistory, hyperref}
+
+\newcommand{\docTitle}{An example for vhistory}
+
+\hypersetup{%
+ 	pdftitle = {\docTitle},
+	pdfkeywords = {\docTitle, Version \vhCurrentVersion
+	from \vhCurrentDate},
+	pdfauthor = {\vhAllAuthorsSet}
+}
+
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+\ifoot{\docTitle\ -- Version \vhCurrentVersion}
+\cfoot[]{}
+\ofoot[\thepage]{\thepage}
+
+\begin{document}
+
+\title{\docTitle}
+\author{\vhListAllAuthors}
+\date{Version \vhCurrentVersion\ from \vhCurrentDate}
+\maketitle
+
+\begin{versionhistory}
+\vhEntry{1.0}{22.01.04}{JPW|KW}{created}
+\vhEntry{1.1}{23.01.04}{DP|JPW}{correction}
+\vhEntry{1.2}{03.02.04}{DP|JPW}{revised after review}
+\end{versionhistory}
+
+\end{document}
