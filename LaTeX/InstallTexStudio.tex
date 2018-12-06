@@ -1,13 +1,15 @@
 \documentclass{scrartcl}
-\usepackage{vhistory, hyperref}
+\usepackage{vhistory}  % version history at end of document
+\usepackage{hyperref}  % hyper references
 
-\newcommand{\docTitle}{An example for vhistory}
+\newcommand{\docTitle}{How to Install TeXstudio}
+\newcommand{\MEK}{Matthew E. Kontz}
 
 \hypersetup{%
  	pdftitle = {\docTitle},
 	pdfkeywords = {\docTitle, Version \vhCurrentVersion
 	from \vhCurrentDate},
-	pdfauthor = {\vhAllAuthorsSet}
+	pdfauthor = {\vhListAllAuthorsLong}
 }
 
 \usepackage{scrpage2}
@@ -23,10 +25,40 @@
 \date{Version \vhCurrentVersion\ from \vhCurrentDate}
 \maketitle
 
+\section{Summary}
+This document was created to briefly described the steps require to setup TeXstudio on both Windows and Ubuntu operating systems.
+
+
+\section{Install MiKTex}
+\label{sec:install_MiKTeX}
+
+\href{https://miktex.org}{MiKTeX} (pronounced mick-tech) is an up-to-date implementation of TeX/LaTeX and related programs.
+
+\subsection{Windows} 
+\label{ssec:install_MiKTeX_windows}
+
+\begin{enumerate}
+	\item Download executable from \href{https://miktex.org/download}{miktex.org/download}
+	\item Run executable and follow directions.
+\end{enumerate}
+
+\section{Install TeXstudio}
+\label{sec:install_TeXstudio}
+
+\href{https://www.texstudio.org/#home}{TeXstudio} is an integrated writing environment for creating LaTeX documents.
+
+\subsection{Windows}
+\label{ssec:install_TeXstudio_windows}
+
+\begin{enumerate}
+	\item Install LaTeX package manager MiKTeX
+	\item Download executable from \href{https://www.texstudio.org/#download}{www.texstudio.org}
+	\item Run executable and follow directions.
+\end{enumerate}
+
 \begin{versionhistory}
-\vhEntry{1.0}{22.01.04}{JPW|KW}{created}
-\vhEntry{1.1}{23.01.04}{DP|JPW}{correction}
-\vhEntry{1.2}{03.02.04}{DP|JPW}{revised after review}
+\vhEntry{1.0}{Dec 5, 2018}{\MEK}{Created initial version with brief directions on installing MiKTeX and TeXstudio in Windows.}
+
 \end{versionhistory}
 
 \end{document}
