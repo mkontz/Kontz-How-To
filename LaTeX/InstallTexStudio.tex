@@ -3,7 +3,7 @@
 \usepackage{hyperref}  % hyper references
 
 \newcommand{\docTitle}{How to Install TeXstudio}
-\newcommand{\MEK}{Matthew E. Kontz}
+\newcommand{\MEK}{Matt Kontz}
 
 \hypersetup{%
  	pdftitle = {\docTitle},
@@ -14,9 +14,12 @@
 
 \usepackage{scrpage2}
 \pagestyle{scrheadings}
-\ifoot{\docTitle\ -- Version \vhCurrentVersion}
-\cfoot[]{}
-\ofoot[\thepage]{\thepage}
+\ihead{\docTitle\ -- Version \vhCurrentVersion}
+\chead[]{}
+%\ohead[\thepage]{\thepage}
+%\ifoot{\docTitle\ -- Version \vhCurrentVersion}
+\cfoot[\thepage]{\thepage}
+%\ofoot[\thepage]{\thepage}
 
 \begin{document}
 
@@ -58,7 +61,7 @@ This document was created to briefly described the steps require to setup TeXstu
 
 \begin{versionhistory}
 \vhEntry{1.0}{Dec 5, 2018}{\MEK}{Created initial version with brief directions on installing MiKTeX and TeXstudio in Windows.}
-
+\vhEntry{1.1}{Dec 7, 2018}{\MEK}{Update header and footers.}
 \end{versionhistory}
 
-\end{document}
+\end{document}
