@@ -1,0 +1,72 @@
+\documentclass{scrartcl}
+
+\usepackage{vhistory}  % version history at end of document
+\usepackage{hyperref}  % hyper references
+
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+
+\newcommand{\docTitle}{Setup ROS}
+\newcommand{\MEK}{Matt Kontz}
+
+\hypersetup{%
+ 	pdftitle = {\docTitle},
+	pdfkeywords = {\docTitle, Version \vhCurrentVersion
+	from \vhCurrentDate},
+	pdfauthor = {\vhListAllAuthorsLong}
+}
+
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+\ihead{\docTitle\ -- Version \vhCurrentVersion}
+\chead[]{}
+%\ohead[\thepage]{\thepage}
+%\ifoot{\docTitle\ -- Version \vhCurrentVersion}
+\cfoot[\thepage]{\thepage}
+%\ofoot[\thepage]{\thepage}
+
+\begin{document}
+
+\title{\docTitle}
+\author{\vhListAllAuthors}
+\date{Version \vhCurrentVersion\ from \vhCurrentDate}
+\maketitle
+
+\section{Summary}
+This document summizes how to setup ROS.  It will be assume that it is installed in an Ubuntu environment.
+
+\section{About ROS}
+\label{sec:install_ros}
+
+From \href{http://www.ros.org/about-ros/}{www.ros.org} ...
+
+\textit{The Robot Operating System (ROS) is a flexible framework for writing robot software. It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms.}
+
+\section{Install ROS}
+\label{sec:install_ros}
+
+Setup computer or VM with an OS (e.g. 16.04 - Xenial)) that matches the desired version of ROS (e.g. Kinitic Kane)
+
+Find installation instrunction on \href{http://www.ros.org/about-ros/}{www.ros.org} for desired version of ROS and operating system (e.g. Kinitic and Ubuntu 16.04 (Xenial)) 
+
+\begin{itemize}
+	\item Choose Full or basic installation
+	\item Initialize rosdep
+	\item Follow instructions for environment setup
+\end{itemize} 
+
+\section{ROS Tutorials}
+\label{sec:install_ros}
+
+\begin{itemize}
+	\item \href{http://wiki.ros.org/ROS/Tutorials}{wiki.ros.org/ROS/Tutorials}
+	\item \href{https://www.udemy.com}{/www.udemy.com}
+\end{itemize}
+
+\begin{versionhistory}
+\vhEntry{1.0}{Dec 8, 2018}{\MEK}{Created initial version with brief directions on setting up a Ubuntu VirtualBox virtual machine in a windows host.}
+
+\end{versionhistory}
+
+\end{document}
+\grid
