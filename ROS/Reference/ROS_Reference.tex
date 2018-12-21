@@ -1,0 +1,120 @@
+\documentclass{scrartcl}
+\usepackage{vhistory}  % version history at end of document
+\usepackage{hyperref}  % hyper references
+
+\newcommand{\docTitle}{ROS Reference}
+\newcommand{\MEK}{Matt Kontz}
+
+\hypersetup{%
+ 	pdftitle = {\docTitle},
+	pdfkeywords = {\docTitle, Version \vhCurrentVersion
+	from \vhCurrentDate},
+	pdfauthor = {\vhListAllAuthorsLong}
+}
+
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+\ihead{\docTitle\ -- Version \vhCurrentVersion}
+\chead[]{}
+%\ohead[\thepage]{\thepage}
+%\ifoot{\docTitle\ -- Version \vhCurrentVersion}
+\cfoot[\thepage]{\thepage}
+%\ofoot[\thepage]{\thepage}
+
+\begin{document}
+
+\title{\docTitle}
+\author{\vhListAllAuthors}
+\date{Version \vhCurrentVersion\ from \vhCurrentDate}
+\maketitle
+
+\section{Summary}
+This document is brief reference covering ROS terminalogy and how to use ROS.
+
+\section{About ROS}
+\label{sec:install_ros}
+
+From \href{http://www.ros.org/about-ros/}{www.ros.org} ...
+
+\textit{The Robot Operating System (ROS) is a flexible framework for writing robot software. It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms.} \\
+
+\begin{itemize}
+	\item Somewhere between middle-ware and framework for robotics application
+	\item Provides seperation and communication tools
+	\item Privides plug \& play libraries
+\end{itemize}
+
+\subsection{ROS Goals:}
+\begin{itemize}
+	\item Provide a standard for robotics application to facilitate reuse, avoid re-inventing wheel.
+	\item Enable modular software design
+	\item Use on any robot
+	\item Language agnostic: C++, Python or other languages (C++ \& Python are standard)
+	\item Open source community
+\end{itemize}
+
+\section{Install ROS}
+\label{sec:install_ros}
+
+Setup computer or VM with an OS (e.g. 16.04 - Xenial)) that matches the desired version of ROS (e.g. Kinitic Kane)
+
+Find installation instrunction on \href{http://www.ros.org/about-ros/}{www.ros.org} for desired version of ROS and operating system (e.g. Kinitic and Ubuntu 16.04 (Xenial)) 
+
+Verify the \textit{source /opt/ros/kinetic/setup.bash} has been added to .bashrc.
+
+\section {Commands}
+
+\begin{itemize}
+	\item Add new package: 
+		\\ $\qquad >>$  sudo apt-get install ros-kinetic-<package>
+
+	\item launch ROS master: 
+		\\ $\qquad >>$  roscore
+
+	\item Make catkins workspace: 
+	\begin{itemize}
+		\item create folder: 
+			\\ $\qquad >>$ mkdir $<$folder\_name$>$
+		\item change directory into folder: 
+			\\ $\qquad >>$ cd $<$folder\_name$>$		
+		\item create src folder: 
+			\\ $\qquad >>$ cd src		
+		\item initialize workspace: 
+			\\ $\qquad >>$ catkin\_make		
+		\item $[$Optional$]$ add setup.bash to .bashrc to avoid having to load setup.bash for this workspace each time
+		\\ $\qquad >>$ source ~/$<$path$>$/$<$catkin\_workspace\_name$>$/devel/setup.bash	
+			
+	\end{itemize}
+
+\end{itemize} 
+
+\section{ROS Tutorials}
+\label{sec:install_ros}
+
+\begin{itemize}
+	\item \href{http://wiki.ros.org/ROS/Tutorials}{wiki.ros.org/ROS/Tutorials}
+	\item \href{https://www.udemy.com}{/www.udemy.com}
+\end{itemize}
+
+\section{Terminology}
+
+\begin{itemize}
+	\item \textbf{\underline{nodes}} A node is a process that performs computation. Nodes are combined together into a graph and communicate with one another using streaming topics, RPC services, and the Parameter Server.  (\href{http://wiki.ros.org/Nodes}{wiki.ros.org/Nodes}) 
+	
+	\item \textbf{\underline{topics}} Topics are named buses over which nodes exchange messages. Topics have anonymous publish/subscribe semantics, which decouples the production of information from its consumption. In general, nodes are not aware of who they are communicating with. Instead, nodes that are interested in data subscribe to the relevant topic; nodes that generate data publish to the relevant topic. There can be multiple publishers and subscribers to a topic.  (\href{http:/wiki.ros.org/Topics/}{wiki.ros.org/Topics})
+
+	\item \textbf{\underline{catkin}} Low-level build system macros and infrastructure for ROS. (\href{http://wiki.ros.org/catkin}{wiki.ros.org/catkin})
+	
+	\item \textbf{\underline{catkin workspace}} catkin packages can be built as a standalone project, in the same way that normal cmake projects can be built, but catkin also provides the concept of workspaces, where you can build multiple, interdependent packages together all at once. (\href{http://wiki.ros.org/catkin/workspaces}{wiki.ros.org/catkin/workspaces})
+	
+	\item \textbf{\underline{package}} Software in ROS is organized in packages. A package might contain ROS nodes, a ROS-independent library, a dataset, configuration files, a third-party piece of software, or anything else that logically constitutes a useful module. (\href{http://wiki.ros.org/Packages}{wiki.ros.org/Packages})
+	
+\end{itemize}
+ 
+
+
+\begin{versionhistory}
+\vhEntry{1.0}{Dec 21, 2018}{\MEK}{Created initial version ROS reference.}
+\end{versionhistory}
+
+\end{document}
