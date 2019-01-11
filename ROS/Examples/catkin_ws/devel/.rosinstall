@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mkontz/GIT/Kontz-How-To/ROS/Examples/catkin_ws/devel/setup.sh
