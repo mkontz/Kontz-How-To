@@ -20,8 +20,8 @@ This applies to new or existing private and public keys in .ssh folder
 	
 ### Add key to ssh-agent
 
-	* `eval "$(ssh-agent -s)"`
-	* `ssh-add ~/.ssh/id_rsa`
+* `eval "$(ssh-agent -s)"`
+* `ssh-add ~/.ssh/id_rsa`
  
 ### Github
 * login into github
