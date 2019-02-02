@@ -33,3 +33,21 @@ This applies to new or existing private and public keys in .ssh folder
  * Set remote to point to ssh github repo path (as opposed to https)
  * fetch and push repo to verify proper setup
  	* Enter passphrase first time for ssh agent
+
+## Windows
+### Install PuTTYgen
+[www.puttygen.com/](https://www.puttygen.com/)
+
+* Install PuTTYgen (if not already installed)
+	* Reboot Windows
+* Open PuTTYgen
+	* load id_rsa generated from Ubuntu
+	* Enter Passphrase
+	* Save as .ppk file
+* open repo in Git Extension
+* go to Repository -> Remote repositories
+	* Replace https URL with SSH URL
+	* browse to .ppk file
+	* Load SSH key
+* open a terminal and try to push and fetch, it should prompt for passphrase
+* Push from Git Extensions
