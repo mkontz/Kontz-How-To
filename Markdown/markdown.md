@@ -17,11 +17,20 @@ A FULLY FEATURED MARKDOWN EDITOR
 Remarkable has Github Flavoured Markdown. This has a simple, easy to learn syntax with features like checklists, highlighting, links, images and more!.
 
 * free
-* windows & linux
+* windows (under & linux & windows version under development
 * exports to .pdf and .html
 * dual payne: input & output
 
 [Remarkable](https://remarkableapp.github.io)
 
 * [linux download](https://remarkableapp.github.io/linux/download.html)
-* Windows is under developemnt
+* Windows is under development
+
+### Markdown Pad 2
+
+[MarkdownPad](http://markdownpad.com/) is a full-featured Markdown editor for Windows.
+
+* free available 
+* windows
+* exports to .pdf and .html (only paid version)
+* dual payne: input & output
