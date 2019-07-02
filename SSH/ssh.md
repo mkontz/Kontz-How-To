@@ -52,6 +52,7 @@ This applies to new or existing private and public keys in .ssh folder
 * open a terminal and try to push and fetch, it should prompt for passphrase
 * Push from Git Extensions
 * Open bash to add key to ssh-agent in windows
-
-	* eval `ssh-agent -s`
-	* ssh-add ~/.ssh/*_rsa
+	* fetch remote (enter passphrase)
+	* ``eval `ssh-agent -s```
+	* `ssh-add ~/.ssh/*_rsa`  (enter passphrase)
+	* may need to repeat for each remote
