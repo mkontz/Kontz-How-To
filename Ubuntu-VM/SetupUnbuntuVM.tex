@@ -134,11 +134,18 @@ Installing guest addition will help the Ubuntu VM integrate properly with Window
 	\item Update software: \\ $\qquad >>$ sudo apt-get update
 	\item Install chrome
 	\begin{itemize}
-		\item Download the latest version from \href{https://www.google.com/chrome/}{www.google.com/chrome/}
-		\item click on .deb file to start installation process
+		\item Option \#1 - download.deb
+		\begin{itemize}
+			\item Download the latest version from \href{https://www.google.com/chrome/}{www.google.com/chrome/}
+			\item click on .deb file to start installation process
+		\end{itemize}
+		\item Option \#2 - terminal
+			\\ $>>$ wget https://dl.google.com/linux/direct/google-chrome-stable\_current\_amd64.deb
+			\\ $>>$ sudo dpkg -i google-chrome-stable\_current\_amd64.deb
 		\item $[optional]$ Lock chrome to launcher and set as default
 		\item $[optional]$ use swap folder to pass favorates from host
 	\end{itemize}
+
 	\item Install shutter screen capture tool: \\ $\qquad >>$ sudo apt-get install shutter
 	\item Install Sublime Text
 	\begin{itemize}
